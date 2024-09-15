@@ -1,0 +1,40 @@
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\bin\x64\Release\Log4Net.config
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\bin\x64\Release\MayChamCongMaster.exe.config
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\bin\x64\Release\MayChamCongMaster.exe
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\bin\x64\Release\log4net.dll
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\bin\x64\Release\log4net.xml
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\Interop.zkemkeeper.dll
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.csproj.ResolveComReference.cache
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.ChangePassword.resources
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.Devices.resources
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCong.Form1.resources
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.Logfile.resources
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.Login.resources
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.Malls.resources
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.MasterPage.resources
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.Properties.Resources.resources
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.Records.resources
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.csproj.GenerateResource.cache
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.csproj.CoreCompileInputs.cache
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.csproj.CopyComplete
+C:\GitHub\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.exe
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\bin\x64\Release\Log4Net.config
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\bin\x64\Release\MayChamCongMaster.exe.config
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\bin\x64\Release\MayChamCongMaster.exe
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\bin\x64\Release\log4net.dll
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\bin\x64\Release\log4net.xml
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\Interop.zkemkeeper.dll
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.csproj.ResolveComReference.cache
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.ChangePassword.resources
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.Devices.resources
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCong.Form1.resources
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.Logfile.resources
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.Login.resources
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.Malls.resources
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.MasterPage.resources
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.Properties.Resources.resources
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.Records.resources
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.csproj.GenerateResource.cache
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.csproj.CopyComplete
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongMaster\MayChamCongMaster\obj\x64\Release\MayChamCongMaster.exe

@@ -1,0 +1,42 @@
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\Log4Net.config
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\MayChamCongServices.exe.config
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\MayChamCongServices.exe
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\MayChamCongServices.pdb
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\Configuration.dll
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\log4net.dll
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\System.Configuration.ConfigurationManager.dll
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\System.Security.AccessControl.dll
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\System.Security.Permissions.dll
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\System.Security.Principal.Windows.dll
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\log4net.xml
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\Interop.zkemkeeper.dll
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.csproj.ResolveComReference.cache
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.ProjectInstaller.resources
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.Service1.resources
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.csproj.GenerateResource.cache
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.csproj.CoreCompileInputs.cache
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.csproj.CopyComplete
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.exe
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.pdb
+C:\GitHub\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\Log4Net.config
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\MayChamCongServices.exe.config
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\MayChamCongServices.exe
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\MayChamCongServices.pdb
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\Configuration.dll
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\log4net.dll
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\System.Configuration.ConfigurationManager.dll
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\System.Security.AccessControl.dll
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\System.Security.Permissions.dll
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\System.Security.Principal.Windows.dll
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\bin\x64\Release\log4net.xml
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\Interop.zkemkeeper.dll
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.csproj.ResolveComReference.cache
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.ProjectInstaller.resources
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.Service1.resources
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.csproj.GenerateResource.cache
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.csproj.CopyComplete
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.exe
+C:\Users\HP\Documents\Zalo Received Files\AEON_MCC\MayChamCongServices_New\MayChamCongServices\obj\x64\Release\MayChamCongServices.pdb

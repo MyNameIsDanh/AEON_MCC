@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FPT_TimeKeeperModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="FPT_TimeKeeperModelStoreContainer">
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FPT_TimeKeeperModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MCC_Records">
+          <Key>
+            <PropertyRef Name="R_Id" />
+          </Key>
+          <Property Name="R_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="R_MCC_Id" Type="Int32" />
+          <Property Name="R_Card_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R_Year" Type="Int32" />
+          <Property Name="R_Month" Type="Int32" />
+          <Property Name="R_Day" Type="Int32" />
+          <Property Name="R_Hour" Type="Int32" />
+          <Property Name="R_Minute" Type="Int32" />
+          <Property Name="R_Second" Type="Int32" />
+        </EntityType>
+        <EntityType Name="MCC_Records_Push">
+          <Key>
+            <PropertyRef Name="R_Id" />
+          </Key>
+          <Property Name="R_Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Personnel_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Store_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Card_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Valid_From" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="Valid_To" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="R_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R_SAP_Id" Type="Int64" />
+          <Property Name="Full_Store" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Cessation" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="FPT_TimeKeeperEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MCC_Records" EntityType="Self.MCC_Records" />
+          <EntitySet Name="MCC_Records_Push" EntityType="Self.MCC_Records_Push" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FPT_TimeKeeperModelStoreContainer" CdmEntityContainer="FPT_TimeKeeperEntities">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MayChamCongAEONModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Files">
+          <Key>
+            <PropertyRef Name="FileID" />
+          </Key>
+          <Property Name="FileID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FileName" Type="varchar" MaxLength="500" />
+          <Property Name="FileStatus" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="FTP">
+          <Key>
+            <PropertyRef Name="FTPID" />
+          </Key>
+          <Property Name="FTPID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FTPPOSID" Type="int" Nullable="false" />
+          <Property Name="FTPYear" Type="int" />
+          <Property Name="FTPMonth" Type="int" />
+          <Property Name="FTPDay" Type="int" />
+          <Property Name="FTPHour" Type="int" />
+          <Property Name="FTPMinute" Type="int" />
+          <Property Name="FTPSecond" Type="int" />
+          <Property Name="FTPUserMaCC" Type="varchar" MaxLength="50" />
+          <Property Name="FTPFileID" Type="bigint" />
+        </EntityType>
+        <EntityType Name="MCC_Records_Push">
+          <Key>
+            <PropertyRef Name="R_Id" />
+          </Key>
+          <Property Name="R_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Personnel_Id" Type="varchar" MaxLength="50" />
+          <Property Name="Store_Id" Type="varchar" MaxLength="50" />
+          <Property Name="Card_Id" Type="varchar" MaxLength="50" />
+          <Property Name="Valid_From" Type="varchar" MaxLength="8" />
+          <Property Name="Valid_To" Type="varchar" MaxLength="8" />
+          <Property Name="R_Type" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="R_SAP_Id" Type="bigint" Nullable="false" />
+          <Property Name="Cessation" Type="varchar" MaxLength="1" />
+          <Property Name="Full_Store" Type="varchar" MaxLength="1" />
+          <Property Name="UserMaCC" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="POS">
+          <Key>
+            <PropertyRef Name="POSID" />
+          </Key>
+          <Property Name="POSID" Type="int" Nullable="false" />
+          <Property Name="POSName" Type="nvarchar" MaxLength="100" />
+          <Property Name="POSIP" Type="varchar" MaxLength="50" />
+          <Property Name="POSPort" Type="int" />
+        </EntityType>
+        <EntityType Name="Record_Push">
+          <Key>
+            <PropertyRef Name="R_ID" />
+          </Key>
+          <Property Name="R_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Personnel_Id" Type="varchar" MaxLength="50" />
+          <Property Name="Store_Id" Type="varchar" MaxLength="50" />
+          <Property Name="Card_Id" Type="varchar" MaxLength="50" />
+          <Property Name="Valid_From" Type="varchar" MaxLength="50" />
+          <Property Name="Valid_To" Type="varchar" MaxLength="50" />
+          <Property Name="R_Type" Type="varchar" MaxLength="50" />
+          <Property Name="Status1" Type="varchar" MaxLength="50" />
+          <Property Name="Status2" Type="varchar" MaxLength="50" />
+          <Property Name="DevicesID" Type="varchar" MaxLength="50" />
+          <Property Name="CESSATION" Type="varchar" MaxLength="50" />
+          <Property Name="Full_STORE" Type="varchar" MaxLength="50" />
+          <Property Name="MCC_Records_Push_Id" Type="int" />
+        </EntityType>
+        <EntityType Name="Records">
+          <Key>
+            <PropertyRef Name="R_ID" />
+          </Key>
+          <Property Name="R_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="R_MCC_ID" Type="int" />
+          <Property Name="R_UserMaCC" Type="varchar" MaxLength="50" />
+          <Property Name="R_Year" Type="int" />
+          <Property Name="R_Month" Type="int" />
+          <Property Name="R_Day" Type="int" />
+          <Property Name="R_Hour" Type="int" />
+          <Property Name="R_Minute" Type="int" />
+          <Property Name="R_Second" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MayChamCongAEON.dbo.userlogin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="userlogin">
+          <Key>
+            <PropertyRef Name="username" />
+            <PropertyRef Name="password" />
+          </Key>
+          <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UsersInfo">
+          <Key>
+            <PropertyRef Name="UsersID" />
+          </Key>
+          <Property Name="UsersID" Type="int" Nullable="false" />
+          <Property Name="UsersName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UsersDayToWork" Type="date" />
+          <Property Name="UserCardNo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserPassword" Type="varchar" MaxLength="50" />
+          <Property Name="UserStatus" Type="varchar" MaxLength="50" />
+          <Property Name="UserDeviceID" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_FTP_Files">
+          <End Role="Files" Type="Self.Files" Multiplicity="0..1" />
+          <End Role="FTP" Type="Self.FTP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Files">
+              <PropertyRef Name="FileID" />
+            </Principal>
+            <Dependent Role="FTP">
+              <PropertyRef Name="FTPFileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FTP_POS">
+          <End Role="POS" Type="Self.POS" Multiplicity="1" />
+          <End Role="FTP" Type="Self.FTP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="POS">
+              <PropertyRef Name="POSID" />
+            </Principal>
+            <Dependent Role="FTP">
+              <PropertyRef Name="FTPPOSID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MayChamCongAEONModelStoreContainer">
+          <EntitySet Name="Files" EntityType="Self.Files" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FTP" EntityType="Self.FTP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MCC_Records_Push" EntityType="Self.MCC_Records_Push" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="POS" EntityType="Self.POS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Record_Push" EntityType="Self.Record_Push" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Records" EntityType="Self.Records" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsersInfo" EntityType="Self.UsersInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="userlogin" EntityType="Self.userlogin" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [userlogin].[username] AS [username], 
+    [userlogin].[password] AS [password]
+    FROM [dbo].[userlogin] AS [userlogin]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_FTP_Files" Association="Self.FK_FTP_Files">
+            <End Role="Files" EntitySet="Files" />
+            <End Role="FTP" EntitySet="FTP" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FTP_POS" Association="Self.FK_FTP_POS">
+            <End Role="POS" EntitySet="POS" />
+            <End Role="FTP" EntitySet="FTP" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MayChamCongAEONModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="File">
+          <Key>
+            <PropertyRef Name="FileID" />
+          </Key>
+          <Property Name="FileID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="FileStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="FTPs" Relationship="Self.FK_FTP_Files" FromRole="Files" ToRole="FTP" />
+        </EntityType>
+        <EntityType Name="FTP">
+          <Key>
+            <PropertyRef Name="FTPID" />
+          </Key>
+          <Property Name="FTPID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FTPPOSID" Type="Int32" Nullable="false" />
+          <Property Name="FTPYear" Type="Int32" />
+          <Property Name="FTPMonth" Type="Int32" />
+          <Property Name="FTPDay" Type="Int32" />
+          <Property Name="FTPHour" Type="Int32" />
+          <Property Name="FTPMinute" Type="Int32" />
+          <Property Name="FTPSecond" Type="Int32" />
+          <Property Name="FTPFileID" Type="Int64" />
+          <NavigationProperty Name="File" Relationship="Self.FK_FTP_Files" FromRole="FTP" ToRole="Files" />
+          <NavigationProperty Name="POS" Relationship="Self.FK_FTP_POS" FromRole="FTP" ToRole="POS" />
+          <Property Name="FTPUserMaCC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="POS">
+          <Key>
+            <PropertyRef Name="POSID" />
+          </Key>
+          <Property Name="POSID" Type="Int32" Nullable="false" />
+          <Property Name="POSName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="POSIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="POSPort" Type="Int32" />
+          <NavigationProperty Name="FTPs" Relationship="Self.FK_FTP_POS" FromRole="POS" ToRole="FTP" />
+        </EntityType>
+        <EntityType Name="Record_Push">
+          <Key>
+            <PropertyRef Name="R_ID" />
+          </Key>
+          <Property Name="R_ID" Type="Int32" Nullable="false" />
+          <Property Name="Personnel_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Store_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Card_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Valid_From" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Valid_To" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DevicesID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CESSATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Full_STORE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Record">
+          <Key>
+            <PropertyRef Name="R_ID" />
+          </Key>
+          <Property Name="R_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="R_MCC_ID" Type="Int32" />
+          <Property Name="R_Year" Type="Int32" />
+          <Property Name="R_Month" Type="Int32" />
+          <Property Name="R_Day" Type="Int32" />
+          <Property Name="R_Hour" Type="Int32" />
+          <Property Name="R_Minute" Type="Int32" />
+          <Property Name="R_Second" Type="Int32" />
+          <Property Name="R_UserMaCC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UsersInfo">
+          <Key>
+            <PropertyRef Name="UsersID" />
+          </Key>
+          <Property Name="UsersID" Type="Int32" Nullable="false" />
+          <Property Name="UsersName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UsersDayToWork" Type="DateTime" Precision="0" />
+          <Property Name="UserCardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserDeviceID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="userlogin">
+          <Key>
+            <PropertyRef Name="username" />
+            <PropertyRef Name="password" />
+          </Key>
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_FTP_Files">
+          <End Role="Files" Type="Self.File" Multiplicity="0..1" />
+          <End Role="FTP" Type="Self.FTP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Files">
+              <PropertyRef Name="FileID" />
+            </Principal>
+            <Dependent Role="FTP">
+              <PropertyRef Name="FTPFileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FTP_POS">
+          <End Role="POS" Type="Self.POS" Multiplicity="1" />
+          <End Role="FTP" Type="Self.FTP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="POS">
+              <PropertyRef Name="POSID" />
+            </Principal>
+            <Dependent Role="FTP">
+              <PropertyRef Name="FTPPOSID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MayChamCongAEONEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Files" EntityType="Self.File" />
+          <EntitySet Name="FTPs" EntityType="Self.FTP" />
+          <EntitySet Name="POS" EntityType="Self.POS" />
+          <EntitySet Name="Record_Push" EntityType="Self.Record_Push" />
+          <EntitySet Name="Records" EntityType="Self.Record" />
+          <EntitySet Name="UsersInfoes" EntityType="Self.UsersInfo" />
+          <EntitySet Name="userlogins" EntityType="Self.userlogin" />
+          <AssociationSet Name="FK_FTP_Files" Association="Self.FK_FTP_Files">
+            <End Role="Files" EntitySet="Files" />
+            <End Role="FTP" EntitySet="FTPs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FTP_POS" Association="Self.FK_FTP_POS">
+            <End Role="POS" EntitySet="POS" />
+            <End Role="FTP" EntitySet="FTPs" />
+          </AssociationSet>
+          <EntitySet Name="MCC_Records_Push" EntityType="MayChamCongAEONModel.MCC_Records_Push" />
+        </EntityContainer>
+        <EntityType Name="MCC_Records_Push">
+          <Key>
+            <PropertyRef Name="R_Id" />
+          </Key>
+          <Property Name="R_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Personnel_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Store_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Card_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Valid_From" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Valid_To" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="R_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R_SAP_Id" Type="Int64" Nullable="false" />
+          <Property Name="Cessation" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Full_Store" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="UserMaCC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MayChamCongAEONModelStoreContainer" CdmEntityContainer="MayChamCongAEONEntities">
+          <EntitySetMapping Name="Files">
+            <EntityTypeMapping TypeName="MayChamCongAEONModel.File">
+              <MappingFragment StoreEntitySet="Files">
+                <ScalarProperty Name="FileID" ColumnName="FileID" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="FileStatus" ColumnName="FileStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FTPs">
+            <EntityTypeMapping TypeName="MayChamCongAEONModel.FTP">
+              <MappingFragment StoreEntitySet="FTP">
+                <ScalarProperty Name="FTPUserMaCC" ColumnName="FTPUserMaCC" />
+                <ScalarProperty Name="FTPID" ColumnName="FTPID" />
+                <ScalarProperty Name="FTPPOSID" ColumnName="FTPPOSID" />
+                <ScalarProperty Name="FTPYear" ColumnName="FTPYear" />
+                <ScalarProperty Name="FTPMonth" ColumnName="FTPMonth" />
+                <ScalarProperty Name="FTPDay" ColumnName="FTPDay" />
+                <ScalarProperty Name="FTPHour" ColumnName="FTPHour" />
+                <ScalarProperty Name="FTPMinute" ColumnName="FTPMinute" />
+                <ScalarProperty Name="FTPSecond" ColumnName="FTPSecond" />
+                <ScalarProperty Name="FTPFileID" ColumnName="FTPFileID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="POS">
+            <EntityTypeMapping TypeName="MayChamCongAEONModel.POS">
+              <MappingFragment StoreEntitySet="POS">
+                <ScalarProperty Name="POSID" ColumnName="POSID" />
+                <ScalarProperty Name="POSName" ColumnName="POSName" />
+                <ScalarProperty Name="POSIP" ColumnName="POSIP" />
+                <ScalarProperty Name="POSPort" ColumnName="POSPort" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Record_Push">
+            <EntityTypeMapping TypeName="MayChamCongAEONModel.Record_Push">
+              <MappingFragment StoreEntitySet="Record_Push">
+                <ScalarProperty Name="R_ID" ColumnName="R_ID" />
+                <ScalarProperty Name="Personnel_Id" ColumnName="Personnel_Id" />
+                <ScalarProperty Name="Store_Id" ColumnName="Store_Id" />
+                <ScalarProperty Name="Card_Id" ColumnName="Card_Id" />
+                <ScalarProperty Name="Valid_From" ColumnName="Valid_From" />
+                <ScalarProperty Name="Valid_To" ColumnName="Valid_To" />
+                <ScalarProperty Name="R_Type" ColumnName="R_Type" />
+                <ScalarProperty Name="Status1" ColumnName="Status1" />
+                <ScalarProperty Name="Status2" ColumnName="Status2" />
+                <ScalarProperty Name="DevicesID" ColumnName="DevicesID" />
+                <ScalarProperty Name="CESSATION" ColumnName="CESSATION" />
+                <ScalarProperty Name="Full_STORE" ColumnName="Full_STORE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Records">
+            <EntityTypeMapping TypeName="MayChamCongAEONModel.Record">
+              <MappingFragment StoreEntitySet="Records">
+                <ScalarProperty Name="R_UserMaCC" ColumnName="R_UserMaCC" />
+                <ScalarProperty Name="R_ID" ColumnName="R_ID" />
+                <ScalarProperty Name="R_MCC_ID" ColumnName="R_MCC_ID" />
+                <ScalarProperty Name="R_Year" ColumnName="R_Year" />
+                <ScalarProperty Name="R_Month" ColumnName="R_Month" />
+                <ScalarProperty Name="R_Day" ColumnName="R_Day" />
+                <ScalarProperty Name="R_Hour" ColumnName="R_Hour" />
+                <ScalarProperty Name="R_Minute" ColumnName="R_Minute" />
+                <ScalarProperty Name="R_Second" ColumnName="R_Second" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsersInfoes">
+            <EntityTypeMapping TypeName="MayChamCongAEONModel.UsersInfo">
+              <MappingFragment StoreEntitySet="UsersInfo">
+                <ScalarProperty Name="UsersID" ColumnName="UsersID" />
+                <ScalarProperty Name="UsersName" ColumnName="UsersName" />
+                <ScalarProperty Name="UsersDayToWork" ColumnName="UsersDayToWork" />
+                <ScalarProperty Name="UserCardNo" ColumnName="UserCardNo" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+                <ScalarProperty Name="UserDeviceID" ColumnName="UserDeviceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="userlogins">
+            <EntityTypeMapping TypeName="MayChamCongAEONModel.userlogin">
+              <MappingFragment StoreEntitySet="userlogin">
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MCC_Records_Push">
+            <EntityTypeMapping TypeName="MayChamCongAEONModel.MCC_Records_Push">
+              <MappingFragment StoreEntitySet="MCC_Records_Push">
+                <ScalarProperty Name="UserMaCC" ColumnName="UserMaCC" />
+                <ScalarProperty Name="Full_Store" ColumnName="Full_Store" />
+                <ScalarProperty Name="Cessation" ColumnName="Cessation" />
+                <ScalarProperty Name="R_SAP_Id" ColumnName="R_SAP_Id" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="R_Type" ColumnName="R_Type" />
+                <ScalarProperty Name="Valid_To" ColumnName="Valid_To" />
+                <ScalarProperty Name="Valid_From" ColumnName="Valid_From" />
+                <ScalarProperty Name="Card_Id" ColumnName="Card_Id" />
+                <ScalarProperty Name="Store_Id" ColumnName="Store_Id" />
+                <ScalarProperty Name="Personnel_Id" ColumnName="Personnel_Id" />
+                <ScalarProperty Name="R_Id" ColumnName="R_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram DiagramId="73dfd479087b4fdb9f4c93b6c1a844ae" Name="Diagram1">
+        <EntityTypeShape EntityType="MayChamCongAEONModel.File" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayChamCongAEONModel.FTP" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayChamCongAEONModel.POS" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayChamCongAEONModel.Record_Push" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayChamCongAEONModel.Record" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayChamCongAEONModel.UsersInfo" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayChamCongAEONModel.userlogin" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MayChamCongAEONModel.MCC_Records_Push" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="MayChamCongAEONModel.FK_FTP_Files" ManuallyRouted="false" />
+        <AssociationConnector Association="MayChamCongAEONModel.FK_FTP_POS" ManuallyRouted="false" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
